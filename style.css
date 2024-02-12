@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
+@font-face {
+  font-family: Harir;
+  src: url(Harir_complete_OTF_Harir_Bold.otf);
+}
+body {
+  background-color: #ffd2a9;
+  color: black;
+  font-family: Harir, "Lalezar", system-ui;
+  padding: 0;
+  margin: 0;
+}
+section {
+  align-content: center;
+  min-height: 100vh;
+}
+section:nth-child(8) {
+  background-color: black;
+}
+.shadow {
+  backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.48);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.hidden {
+  opacity: 0;
+  filter: blur(7px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+.Topic {
+  text-align: right;
+  margin-right: 25px;
+  font-weight: 280;
+  font-size: 5vw;
+}
+.description {
+  text-align: right;
+  margin-right: 25px;
+  font-weight: 100;
+
+  font-size: 2.5vw;
+  text-wrap: wrap;
+}
+svg {
+  display: inline-block;
+  width: 32vw;
+  height: auto;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+.img {
+  width: 30%;
+  height: 30%;
+  transition: all 0.5s linear, src 0.5s linear;
+
+  border: 2vw solid transparent;
+  border-image-source: url("xxxx.png");
+  border-image-slice: 25;
+}
+path {
+  transition: fill 0.5s linear;
+  cursor: default;
+}
+.hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s linear;
+  backdrop-filter: blur(0px);
+}
+.loadingScreen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: #ffd2a9;
+  z-index: 8;
+}
+.loadingIcon {
+  width: 15vw;
+  height: 15vw;
+  animation: loading infinite linear 2s;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hide:nth-child(3) {
+  transform: translateX(-100%);
+}
+
+di.Xxxx.hide {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-100%) translate(-50%, -50%);
+  transition: transform 1s Fast-Out, visibility 1s ease, opacity 1s ease;
+}
+.showw {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0) translate(-50%, -50%);
+  transition: transform 1s ease-out, visibility 1s linear, opacity 1s linear;
+}
+.CardContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Card,
+.windowCard {
+  position: relative;
+  align-items: center;
+  width: 24vw;
+  height: 28vw;
+  background-color: red;
+  margin-left: 8vw;
+  border-radius: 0.5vw;
+  transition: transform linear 0.3s;
+  overflow: hidden;
+  cursor: pointer;
+}
+.windowCard {
+  margin-left: 1vw;
+  margin-right: 1vw;
+
+  width: 20vw;
+  height: 24vw;
+  transition: all 0.5s linear;
+}
+
+.windowCard:hover {
+  width: 24vw;
+}
+.windowCard:hover .circle {
+  transform: rotate(60deg);
+}
+.circle {
+  position: absolute;
+  left: -30%;
+  top: -20%;
+  width: 20vw;
+  transition: transform ease 0.5s;
+}
+.Card:hover {
+  transform: perspective(4000px) rotateY(7deg) rotateX(7deg) translateY(-130px);
+}
+.Card:hover .Logo {
+  transform: scale(110%);
+}
+.cardText {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  font-weight: 100;
+  font-size: 2.5vw;
+  color: white;
+  z-index: 1;
+}
+
+.Logo {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  transition: transform ease-in-out 0.3s;
+}
+
+.Card:nth-child(3) {
+  margin-right: 8vw;
+}
+
+.Window {
+  width: 50vw;
+  height: 50vw;
+  position: fixed;
+  top: 50%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+  background-color: aliceblue;
+  z-index: 3;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.Main {
+  color: black;
+  font-size: 2.5vw;
+  text-align: center;
+}
+.windowDescription {
+  font-size: 1.5vw;
+  text-align: center;
+  margin: 4vw;
+}
+.closeBtn {
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  width: 2vw;
+  height: 2vw;
+  font-size: 2vw;
+  right: 0;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+/* @media all and (max-width: 1500px) {
+  .Window {
+    height: 30%;
+    background-color: red;
+  }
+} */
+.cloneMap {
+  display: block;
+  width: 50vw;
+  height: auto;
+  margin: auto;
+  fill: #6b4e45;
+}
+
+.HateOnPhones {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+  margin: 0px;
+  top: 0%;
+  left: 0%;
+}
+.Waring {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+  color: white;
+}
+
+@media all and (max-width: 500px) {
+  .HateOnPhones {
+    display: block;
+  }
+}
+.Xxxx {
+  width: 45vw;
+  height: 45vw;
+  background-color: aliceblue;
+  border-radius: 5%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 12;
+}
+.pdf {
+  width: 40vw;
+  height: 40vw;
+  position: absolute;
+  left: 2%;
+  top: 5%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
